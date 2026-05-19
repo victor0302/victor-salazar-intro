@@ -98,14 +98,14 @@ h1{
     height: 32px;
 }
 
-#Skills ul{
+#skills ul{
     display: flex;
-    gap: 16;
+    gap: 16px;
     flex-wrap: wrap;
     padding: 0;
 }
 
-#Skills li {
+#skills li {
     flex: 1 1 180px;
     background-color: lightgreen;
     padding: 10px;
