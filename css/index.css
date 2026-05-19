@@ -1,0 +1,99 @@
+body {
+    background-color: aliceblue;
+    color: darkgreen;
+    font-family: "Playfair Display", serif;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    padding: 12px;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: darkgreen;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+section {
+    margin:10px 0;
+    padding: 10px;
+}
+
+#About{
+    text-align: center;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: darkkhaki;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 900;
+    color: darkolivegreen;
+    text-align: center;
+    padding: 20px;
+}
+
+#Experience {
+    background-color: lightyellow;
+    border-radius: 50px;
+}
+
+#Experience ul{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+#Experience li {
+    flex: 1 1 180px;
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 50px;
+    list-style: none;
+    text-align: center;
+}
+
+#Connect ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#Connect li {
+    list-style: none;
+}
+
+#Connect a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+#Connect img {
+    width: 32px;
+    height: 32px;
+}
