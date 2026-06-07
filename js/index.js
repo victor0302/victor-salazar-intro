@@ -17,7 +17,7 @@ footer.appendChild(copyright);
 
 const skills = ['JavaScript', 'HTML', 'CSS', 'Python', 'SQL'];
 
-const skillsSection = document.getElementById("Skills")
+const skillsSection = document.getElementById("skills")
 
 const skillsList = skillsSection.querySelector("ul")
 
