@@ -27,3 +27,15 @@ for (let i =0 ; i<skills.length;i++){
     skill.innerText = skills[i]
     skillsList.appendChild(skill)
 }
+
+let messageForm = document.forms["leave_message"]
+
+messageForm.addEventListener("submit",function(event){
+    event.preventDefault();
+    let nameField = event.target.usersName.value
+    let emailField = event.target.usersEmail.value
+    let commentField = event.target.usersMessage.value
+    console.log(nameField,emailField,commentField)
+    messageForm.reset();
+    
+});
