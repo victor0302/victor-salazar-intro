@@ -36,8 +36,20 @@ messageForm.addEventListener("submit",function(event){
     let emailField = event.target.usersEmail.value
     let commentField = event.target.usersMessage.value
     console.log(nameField,emailField,commentField)
-    let messageSection = document.getElementById("messages")
-    let messageList 
+    let messageSection = document.getElementById("Message")
+    let messageList =messageSection.querySelector("ul")
+    let newMessage = document.createElement('li')
+    newMessage.innerHTML = "<a href='mailto:" + emailField + "'>" + nameField + "</a>" + 
+    "<span>" + commentField + "</span>"
+    let removeButton = document.createElement("button")
+    removeButton.innerText="remove"
+    removeButton.type = "button"
+    removeButton.addEventListener("click",function(event){
+        let entry = event.target.parentNode
+        entry.remove()
+    })
+    newMessage.appendChild(removeButton)
+    messageList.appendChild(newMessage)
     messageForm.reset();
     
 });
