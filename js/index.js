@@ -50,5 +50,5 @@ messageForm.addEventListener("submit",function(event){
     newMessage.appendChild(removeButton)
     messageList.appendChild(newMessage)
     messageForm.reset();
-    
 });
+
