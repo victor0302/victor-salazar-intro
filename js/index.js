@@ -57,4 +57,6 @@ fetch("https://api.github.com/users/victor0302/repos").then(function(response){
 }).then(function(data){
     let repositories = data
     console.log(repositories)
+}).catch(function(error){
+    console.log("Something went wrong: " + error.message)
 })
