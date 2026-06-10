@@ -115,3 +115,180 @@ h1{
     text-align: center;
 }
 
+#Form form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightyellow;
+    border-radius: 30px;
+}
+
+#Form label {
+    font-weight: 700;
+    color: darkgreen;
+}
+
+#Form input,
+#Form textarea {
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 2px solid darkkhaki;
+    border-radius: 12px;
+    background-color: aliceblue;
+    color: darkgreen;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#Form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#Form input:focus,
+#Form textarea:focus {
+    outline: none;
+    border-color: darkolivegreen;
+}
+
+#Form button {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 700;
+    color: darkgreen;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    min-height: 48px;
+    align-self: flex-start;
+}
+
+#Form button:hover {
+    background-color: darkkhaki;
+}
+
+#messages ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#messages li {
+    background-color: lightyellow;
+    padding: 18px 20px;
+    border-radius: 20px;
+    border-left: 6px solid darkolivegreen;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "header button"
+        "message message";
+    gap: 10px 14px;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#messages .message-header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+}
+
+#messages a {
+    color: darkolivegreen;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#messages a:hover {
+    text-decoration: underline;
+}
+
+#messages em {
+    color: darkgreen;
+    font-size: 14px;
+    font-style: normal;
+    opacity: 0.75;
+}
+
+#messages em::before {
+    content: "— ";
+}
+
+#messages span {
+    grid-area: message;
+    color: darkgreen;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 8px;
+    border-top: 1px solid darkkhaki;
+}
+
+#messages button {
+    grid-area: button;
+    padding: 8px 18px;
+    background-color: lightgreen;
+    color: darkgreen;
+    border: 2px solid darkolivegreen;
+    border-radius: 50px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    min-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#messages button:hover {
+    background-color: darkkhaki;
+    color: aliceblue;
+}
+
+@media (max-width: 600px) {
+    #messages li {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "message"
+            "button";
+    }
+
+    #messages button {
+        justify-self: stretch;
+        padding: 12px;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    #Form form {
+        padding: 14px;
+    }
+
+    #Form input,
+    #Form textarea {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    #Form button {
+        width: 100%;
+        align-self: stretch;
+        padding: 16px;
+    }
+}
+
