@@ -36,11 +36,10 @@ messageForm.addEventListener("submit",function(event){
     let emailField = event.target.usersEmail.value
     let commentField = event.target.usersMessage.value
     console.log(nameField,emailField,commentField)
-    let messageSection = document.getElementById("Message")
+    let messageSection = document.getElementById("messages")
     let messageList =messageSection.querySelector("ul")
     let newMessage = document.createElement('li')
-    newMessage.innerHTML = "<a href='mailto:" + emailField + "'>" + nameField + "</a>" + 
-    "<span>" + commentField + "</span>"
+    newMessage.innerHTML = "<div class='message-header'><a href='mailto:" + emailField + "'>" + nameField + "</a><em>" + emailField + "</em></div><span>" + commentField + "</span>"
     let removeButton = document.createElement("button")
     removeButton.innerText="remove"
     removeButton.type = "button"
