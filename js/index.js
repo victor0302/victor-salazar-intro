@@ -36,6 +36,8 @@ messageForm.addEventListener("submit",function(event){
     let emailField = event.target.usersEmail.value
     let commentField = event.target.usersMessage.value
     console.log(nameField,emailField,commentField)
+    let messageSection = document.getElementById("messages")
+    let messageList 
     messageForm.reset();
     
 });
