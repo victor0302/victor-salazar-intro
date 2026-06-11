@@ -115,6 +115,34 @@ h1{
     text-align: center;
 }
 
+#Projects ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#Projects li {
+    flex: 1 1 220px;
+    background-color: lightyellow;
+    color: darkgreen;
+    padding: 16px 20px;
+    border-radius: 16px;
+    border-left: 6px solid darkolivegreen;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-word;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#Projects li:hover {
+    transform: translateY(-2px);
+    background-color: lightgreen;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 #Form form {
     display: flex;
     flex-direction: column;
@@ -289,6 +317,10 @@ h1{
         width: 100%;
         align-self: stretch;
         padding: 16px;
+    }
+
+    #Projects li {
+        flex: 1 1 100%;
     }
 }
 
