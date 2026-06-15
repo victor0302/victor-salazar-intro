@@ -1,0 +1,179 @@
+body {
+    background-color: aliceblue;
+    color: darkgreen;
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    padding: 12px;
+    z-index: 10;
+    border-bottom: 2px solid darkkhaki;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: darkgreen;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 18px;
+    background-color: lightgreen;
+    border-radius: 50px;
+}
+
+header nav a:hover {
+    background-color: darkkhaki;
+    color: aliceblue;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 900;
+    color: darkolivegreen;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+#Soccer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px 40px;
+}
+
+#apiNav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#apiNav button {
+    padding: 14px 32px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 700;
+    color: darkgreen;
+    background-color: lightgreen;
+    border: 2px solid darkolivegreen;
+    border-radius: 50px;
+    cursor: pointer;
+    min-height: 48px;
+    min-width: 160px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#apiNav button:hover {
+    background-color: darkkhaki;
+    color: aliceblue;
+    transform: translateY(-2px);
+}
+
+#results {
+    background-color: lightyellow;
+    border-radius: 30px;
+    padding: 24px;
+    min-height: 100px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#results:empty::before {
+    content: "Click a button above to see World Cup data.";
+    color: darkgreen;
+    opacity: 0.7;
+    font-style: italic;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+#results h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: darkolivegreen;
+    background-color: lightgreen;
+    padding: 10px 18px;
+    border-radius: 16px;
+    margin: 20px 0 10px;
+}
+
+#results h2:first-child {
+    margin-top: 0;
+}
+
+#results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#results li {
+    background-color: aliceblue;
+    color: darkgreen;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border-left: 6px solid darkolivegreen;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+#results li:hover {
+    background-color: lightgreen;
+    transform: translateX(4px);
+}
+
+.error {
+    color: aliceblue;
+    background-color: darkolivegreen;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.loading {
+    text-align: center;
+    color: darkgreen;
+    font-style: italic;
+    font-size: 18px;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    #apiNav button {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    #results {
+        padding: 16px;
+    }
+
+    #results h2 {
+        font-size: 22px;
+    }
+}
