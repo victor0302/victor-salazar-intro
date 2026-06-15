@@ -39,10 +39,15 @@ fetch(" https://v3.football.api-sports.io/standings?league=1&season=2022",{
         const standings = data.response[0].league.standings
 
         standings.forEach(function(group){
-            html += `<h2>${group[0].team.name}</h2>`
+            html += `<h2>${group[0].team.group}</h2>`
             html += "<ul>"
+            group.forEach(function(team){
+                html += `<li> ${team.rank} ${team.team.name} - ${team.points} pts</li>`
+            })
+            html += "</ul>"
 
         })
+        results.innerHTML = html
         
     }).catch(function(error){
         console.log("Something went wrong: " + error.message)
