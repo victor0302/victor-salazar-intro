@@ -34,6 +34,16 @@ fetch(" https://v3.football.api-sports.io/standings?league=1&season=2022",{
         return response.json()
     }).then(function(data){
         console.log(data)
+        results.innerHTML =""
+        let html = ""
+        const standings = data.response[0].league.standings
+
+        standings.forEach(function(group){
+            html += `<h2>${group[0].team.name}</h2>`
+            html += "<ul>"
+
+        })
+        
     }).catch(function(error){
         console.log("Something went wrong: " + error.message)
     })
