@@ -12,7 +12,12 @@ fetch("https://v3.football.api-sports.io/fixtures?league=1&season=2022",{
     }).then(function(response){
         return response.json()
     }).then(function(data){
-        console.log(data)
+        let html = "<ul>"
+        data.response.forEach(function(fixture){
+            html += `<li> ${fixture.teams.home.name} vs ${fixture.teams.away.name} - Score: ${fixture.goals.home} - ${fixture.goals.away} </li>`
+        })
+        html += "</ul>"
+        results.innerHTML = html
     }).catch(function(error){
         console.log("Something went wrong: " + error.message)
     })
